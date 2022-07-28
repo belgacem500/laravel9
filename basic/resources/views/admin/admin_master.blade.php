@@ -206,8 +206,6 @@
 
     </div>
 </div>
-
-{{asset('backend/')}}
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCn8TFXGg17HAUcNpkwtxxyT9Io9B_NcM" defer></script>
 <script src="{{asset('backend/assets/plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('backend/assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>

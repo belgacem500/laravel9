@@ -1,11 +1,6 @@
-<x-app-layout>
-  <x-slot name="header">
-    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-       <b> كل العلامات التجارية </b>
-      <b style="float:right;">
-      </b>
-    </h2>
-  </x-slot>
+@extends('admin.admin_master')
+
+@section('admin')
 
   <div class="py-12">
 
@@ -42,14 +37,14 @@
                   <td> <img src="{{ asset($brand->brand_image) }}" style="height:40px; width:70px;" alt="brand image"> </td>
                   <td>
                     @if($brand->created_at==NULL)
-                    <span class="text-danger">No Date Set</span> 
+                    <span class="text-danger">No Date Set</span>
                     @else
                     {{ Carbon\Carbon::parse($brand->created_at)->diffForHumans() }}
                   </td>
                   @endif
                   <td>
                    <a href="{{ url('brand/edit/'.$brand->id) }}" class="btn btn-info text-white">تعديل</a>
-                   <a href="{{ url('brand/delete/'.$brand->id) }}" onclick="return confirm('Are you sure to delete?')"  class="btn btn-danger">حذف</a> 
+                   <a href="{{ url('brand/delete/'.$brand->id) }}" onclick="return confirm('Are you sure to delete?')"  class="btn btn-danger">حذف</a>
                   </td>
                 </tr>
                 @endforeach
@@ -98,5 +93,4 @@
 
 
 
-  </div>
-</x-app-layout> 
+@endsection

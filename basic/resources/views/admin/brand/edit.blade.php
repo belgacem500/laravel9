@@ -1,13 +1,9 @@
-<x-app-layout>
-  <x-slot name="header">
-    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        تعديل علامة تجارية <b> </b>
-      <b style="float:right;">
-      </b>
-    </h2>
-  </x-slot>
-  
-  @if(session('success'))
+@extends('admin.admin_master')
+
+@section('admin')
+
+
+    @if(session('success'))
           <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>{{ session('success') }}</strong>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -56,5 +52,4 @@
     </div>
   </div>
 
-  </div>
-</x-app-layout>
+@endsection
